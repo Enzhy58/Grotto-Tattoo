@@ -1,5 +1,10 @@
 body {
-
+  background-color: $gray;
+  color: $silver;
+  font-family: $firasans, sans-serif;
+  font-weight: $fw-400;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .sr-only {
@@ -16,7 +21,29 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.title {
+  font-family: $playfairdisplay;
+  font-weight: $fw-700;
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+  margin-bottom: 80px;
+  color: $accent;
+}
+
+.btn {
+  width: 212px;
+  height: 56px;
+  padding: 17px 58px;
+  background-color: $accent;
+  font-family: $firasans, sans-serif;
+  font-weight: $fw-700;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 30px;
 }
