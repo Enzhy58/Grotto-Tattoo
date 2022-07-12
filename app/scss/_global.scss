@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: $gray;
   color: $silver;
@@ -5,6 +10,16 @@ body {
   font-weight: $fw-400;
   font-size: 20px;
   line-height: 1.5;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .sr-only {

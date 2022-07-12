@@ -672,3 +672,26 @@
   }
   
 }
+
+
+
+.team {
+  background-color: $silver;
+  padding: 123px 0;
+  color: $dark;
+  &__title {
+    color: $dark;
+    margin-bottom: 26px;
+  }
+  &__top {
+    text-align: center;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  &__item {
+    display: flex;
+  }
+
+}
