@@ -692,6 +692,62 @@
   }
   &__item {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 160px;
+    }
+  }
+  &__wrapper {
+    z-index: 0;
+    position: relative;
+    
+      &::before {
+        content: '';
+        position: absolute;
+        width: 438px;
+        height: 277px;
+        top: 10%;
+        left: 0;
+        z-index: -1;
+        background-color: transparent;
+        border: 1px solid $dark;
+      }
+  }
+  &__img {
+    margin-left: 15%;
+    margin-bottom: 18px;
+  }
+  &__name {
+    display: block;
+    font-weight: 700;
+    color: $accent;
+    margin-bottom: 8px;
+  }
+  &__post {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 8px;
+  }
+  &__text {
+    max-width: 379px;
+  }
+  &__link {
+    display: block;
+    width: 283px;
+    height: 190px;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 26px;
+    margin-bottom: 38px;
+  }
+  &__btn {
+    color: $silver;
+    margin: 0 auto;
+    display: block;
+    width: 235px;
   }
 
 }
