@@ -577,7 +577,66 @@
     display: block;
     margin: 0 auto;
   }
+}
 
+.contacts {
+  position: relative;
+  &__box {
+    padding: 48px 48px 53px 90px;
+    max-width: 470px;
+    max-height: 518px;
+    height: 100%;
+    background-color: $dark;
+    position: absolute;
+    top: 10%;
+    right: 60%;
+  }
+  &__title {
+    color: $silver;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  &__phone,
+  &__email {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    color: $accent;
+    margin-bottom: 28px;
+  }
+  &__phone,
+  &__email,
+  &__place {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 34px;
+      height: 36px;
+      left: -15%;
+      right: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__phone {
+    &::before {
+      background-image: url("../images/icons/phone.svg");
+    }
+  }
+  &__email {
+    &::before {
+      background-image: url("../images/icons/email.svg");
+    }
+  }
+  &__place {
+    margin-bottom: 28px;
+    &::before {
+      background-image: url("../images/icons/place.svg");
+    }
+  }
 }
 
 .footer {
