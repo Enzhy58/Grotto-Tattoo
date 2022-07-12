@@ -506,3 +506,69 @@
    z-index: 10;
   }
 }
+
+.request {
+  padding: 120px 0;
+  &__title {
+    color: $silver;
+  }
+  &__form {
+    max-width: 602px;
+    margin: 0 auto;
+  }
+  &__field {
+    width: 100%;
+    max-width: 602px;
+    height: 48px;
+    border: 1px solid #E7E7E7;
+    border-radius: 90px;
+    padding: 13px;
+    &::placeholder {
+      font-weight: $fw-300;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__field:nth-child(2),
+  &__field:nth-child(3) {
+    max-width: 295px;
+  }
+  &__field--textarea {
+    height: 175px;
+    border-radius: 20px;
+  }
+
+  &__label-age {
+    max-width: 300px;
+    width: 100%;
+  }
+  &__input-age {
+    border: 1px solid transparent;
+    margin-left: 20px;
+    max-width: 300px;
+  
+    &:checked+.request__checkbox-age {
+      border: 1px solid $silver;
+      border-radius: 50%;
+      background-color: $accent;
+    }
+  }
+  
+  &__checkbox-age {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $silver;
+    border-radius: 50%;
+    margin-left: -30px;
+    margin-top: 4px;
+    position: absolute;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+}

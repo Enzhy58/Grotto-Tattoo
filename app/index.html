@@ -277,6 +277,31 @@
           </div>
         </div>
       </section>
+
+      <section class="request">
+        <div class="container">
+          <h2 class="title request__title">Оставить заявку</h2>
+          <form class="request__form" action="#">
+            <input class="request__field" type="text" placeholder="Ваше имя" name="name" id="name" required>
+            <input class="request__field" type="tel" placeholder="Ваше телефон" name="tel" id="tel" required>
+            <input class="request__field" type="e-mail" placeholder="Ваше E-mail" name="e-mail" id="e-mail" required>
+            <select class="request__field select-style" request>
+              <option value="">Выберете услугу</option>
+              <option value="">Художественная татуировка</option>
+              <option value="">Перекрытие тату</option>
+              <option value="">Удаление тату лазером</option>
+              <option value="">Обучение</option>
+            </select>
+            <textarea class="request__field request__field--textarea" placeholder="Опишите, что хотите сделать. Размер, место нанесения, стиль, как с Вами удобнее связаться." name="message" id="message" required></textarea>
+            <label class="request__label-age">
+              <input class="request__input-age" type="checkbox">
+              <span class="request__checkbox-age"></span>
+              Мне есть 18 и я согласен/согласна на обработку персональных данных
+            </label>
+            <a class="btn request__btn" href="#">Отправить</a>
+          </form>
+        </div>
+      </section>
     </main>
   </div>
 
