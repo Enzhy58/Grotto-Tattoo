@@ -1,4 +1,21 @@
+const { default: Swiper } = require("swiper");
+
 $(function(){
+  $('.content-slide__thumb').slick({
+    asNavFor: '.content-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slideToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+
+  $('.content-slide__big').slick({
+    asNavFor: '.content-slide__thumb',
+    draggable: false,
+    arrows: false
+  });
+
   $('.reviews__slider').slick({
     dots: true,
     infinite: false,
@@ -13,4 +30,10 @@ $(function(){
       }
     ]
   });
+
+
+});
+
+const sliderMain = new Swiper('.slider_main', {
+
 });

@@ -751,3 +751,124 @@
   }
 
 }
+
+.tabs {
+  background-color: $gray;
+  padding: 120px 0;
+  &__title {
+    color: $silver;
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 922px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    width: 256px;
+    height: 44px;
+    background-color: $silver;
+    border-radius: 5px;
+    color: $accent;
+    font-size: 16px;
+    line-height: 106.5%;
+    padding: 5px 19px 5px 100px;
+    margin-bottom: 20px;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__items--tattoo::before {
+    background-image: url("../images/icons/tattoo.svg");
+  }
+  &__items--hide::before {
+    background-image: url("../images/icons/hide.svg");
+  }
+  &__items--removal::before {
+    background-image: url("../images/icons/removal.svg");
+  }
+  &__items--drowing::before {
+    background-image: url("../images/icons/drowing.svg");
+  }
+  &__items--training::before {
+    background-image: url("../images/icons/training.svg");
+  }
+  &__content {
+    display: flex;
+  }
+  &__content-slide {
+    max-width: 600px;
+    margin-right: 60px;
+  }
+  &__content-box {
+    max-width: 426px;
+    font-size: 16px;
+    line-height: 106.5%;
+  }
+  &__content-title {
+    font-family: $playfairdisplay;
+    font-weight: $fw-700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 50px;
+  }
+  &__content-text {
+    margin-bottom: 30px;
+  }
+  &__content-text p {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__content-list {
+    list-style: disc;
+  }
+}
+.content-slide {
+  display: flex;
+  &__thumb {
+    width: 122px;
+    margin-right: 42px;
+  }
+  &__thumb-item {
+    margin-bottom: 31px;
+    width: 122px;
+    height: 122px;
+    cursor: pointer;
+    img{
+      width: 122px;
+      height: 122px;
+      object-fit: contain;
+    }
+  }
+  &__big {
+    width: 434px;
+    img {
+      width: 434px;
+      height: 611px;
+      object-fit: cover;
+    }
+  }
+}
+
+
