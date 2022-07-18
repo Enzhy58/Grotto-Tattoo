@@ -35,12 +35,16 @@
             <ul class="social">
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <img class="social__img" src="images/icons/instagram.svg" alt="">
+                  <svg class="social__img">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <img class="social__img" src="images/icons/vk.svg" alt="">
+                  <svg class="social__img">
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -71,7 +75,9 @@
             </div>
             <div class="top__phone">
               <a href="#" class="top__phone-link">
-                <img class="top__phone-img" src="images/phone.svg" alt="">
+                <svg class="top__phone-img">
+                  <use xlink:href="images/sprite.svg#phone--top"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -81,27 +87,37 @@
       <section class="services">
         <div class="container">
           <h2 class="sr-only">Услуги</h2>
-          <div class="services__inner">
-            <div class="services__box" style="background-image: url(images/services-1.jpg);">
-              <span class="services__name">Художественная татуировка</span>
-            </div>
-            <div class="services__box" style="background-image: url(images/services-2.jpg);">
-              <span class="services__name">Перекрытие тату</span>
-            </div>
-            <div class="services__box" style="background-image: url(images/services-3.jpg);">
-              <span class="services__name">Удаление тату лазером</span>
-            </div>
-            <div class="services__box" style="background-image: url(images/services-4.jpg);">
-              <span class="services__name">Отрисовка индивидуального эскиза</span>
-            </div>
-            <div class="services__box" style="background-image: url(images/services-5.jpg);">
-              <span class="services__name">Обучение</span>
-            </div>
-          </div>
+          <ul class="services__list">
+            <li class="services__item">
+              <a class="services__link" href="#" style="background-image: url(images/services-1.jpg);">
+                <span class="services__name">Художественная татуировка</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#" style="background-image: url(images/services-2.jpg);">
+                <span class="services__name">Перекрытие тату</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#" style="background-image: url(images/services-3.jpg);">
+                <span class="services__name">Удаление тату лазером</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#" style="background-image: url(images/services-4.jpg);">
+                <span class="services__name">Отрисовка индивидуального эскиза</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#" style="background-image: url(images/services-5.jpg);">
+                <span class="services__name">Обучение</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="about">
+      <section class="about page-section">
         <div class="container">
           <h2 class="title">О нас</h2>
           <div class="about__inner">
@@ -135,7 +151,7 @@
         </div>
       </section>
 
-      <section class="benefits">
+      <section class="benefits page-section">
         <div class="container">
           <h2 class="title benefits__title">Наши достижения</h2>
           <div class="benefits__inner">
