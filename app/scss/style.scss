@@ -7,6 +7,7 @@
 .header {
   background-color: $dark;
   padding: 25px 90px;
+  z-index: 999;
 }
 
 .menu {
@@ -903,6 +904,9 @@
   &__box {
     max-width: 425px;
   }
+  &__title {
+    margin-bottom: 40px;
+  }
 }
 
 
@@ -941,6 +945,8 @@ html {
   height: 685px;
   width: 300%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   left: -100%;
   transition: var(--transition) !important;
@@ -966,7 +972,11 @@ html {
   opacity: .9;
   transition: transform var(--transition);
   transition-duration: 3s;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.gallery__text {
+  margin-bottom: 40px;
 }
 
 .gallery__box.hidden {
