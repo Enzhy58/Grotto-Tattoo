@@ -95,6 +95,8 @@
 
   &__box {
     position: relative;
+    box-shadow: 2px 2px 14px 1px rgba($black, 0.4);
+    border-radius: 50px;
   }
   &__phone {
     width: 63px;
@@ -102,7 +104,7 @@
     border-radius: 50%;
     background-color: $accent;
     position: absolute;
-    right: 20%;
+    right: 15%;
     bottom: 22%;
     z-index: 999;
     &-img {
@@ -123,6 +125,18 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  &__item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 210px;
+      height: 220px;
+      top: -7%;
+      right: 39%;
+      border: 2px solid $dark;
+    }
+  }
   &__link {
     background-size: cover;
     background-position: center;
@@ -130,7 +144,9 @@
     width: 278px;
     height: 176px;
     margin-bottom: 143px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     &:nth-child(1),
     &:nth-child(2),
@@ -145,15 +161,6 @@
       top: 0;
       right: 0;
       background-color: rgba($dark, 0.5);
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      width: 210px;
-      height: 220px;
-      top: -12%;
-      right: 12%;
-      border: 2px solid $dark;
     }
   }
   &__name {
@@ -534,6 +541,7 @@
 
   &__title {
     color: $silver;
+    margin-bottom: 40px;
   }
   &__form {
     max-width: 602px;
@@ -557,37 +565,119 @@
   }
   &__field:nth-child(2),
   &__field:nth-child(3) {
-    max-width: 295px;
+    max-width: 298px;
   }
+  .select-style {
+    font-weight: $fw-300;
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+    margin-bottom: 20px;
+    & option {
+      color: $black;
+    }
+    .jq-selectbox__select {
+      border: 1px solid $silver;
+      border-radius: 50px;
+      padding: 13px;
+      background: none;
+      box-shadow: none;
+      text-shadow: none;
+      height: 48px;
+      font-family: $firasans, sans-serif;
+      font-weight: $fw-300;
+      font-size: 18px;
+      line-height: 22px;
+      color: $silver;
+    }
+    .jq-selectbox__trigger {
+      border-left: none;
+    }
+    .jq-selectbox__trigger-arrow {
+      position: absolute;
+      top: 50%;
+      right: 13px;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 11px;
+      border: none;
+      background-image: url("../images/icons/select.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
   &__field--textarea {
     height: 175px;
     border-radius: 20px;
   }
-
-  &__label-age {
-    max-width: 300px;
-    width: 100%;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    font-weight: $fw-300;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
   }
-  &__input-age {
-    border: 1px solid transparent;
-    margin-left: 20px;
-    max-width: 300px;
-  
-    &:checked+.request__checkbox-age {
-      border: 1px solid $silver;
+  &__add {
+    padding-left: 46px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      top: -10%;
+      left: 0;
+      border: 1px solid #E7E7E7;
       border-radius: 50%;
-      background-color: $accent;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url("../images/icons/add.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0;
+      left: 4%;
+      width: 23px;
+      height: 23px;
     }
   }
-  
+  &__label-age {
+    max-width: 295px;
+    display: block;
+    margin-left: 30px;
+  }
+  &__input-age {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 45px;
+  }
   &__checkbox-age {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border: 1px solid $silver;
     border-radius: 50%;
-    margin-left: -30px;
+    margin-left: -32px;
     margin-top: 4px;
     position: absolute;
+  }
+  &__input-age:checked + .request__checkbox-age::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $accent;
   }
   &__btn {
     display: block;
@@ -770,10 +860,9 @@
     opacity: 1;
   }
   &__btn {
-    color: $silver;
     margin: 0 auto;
     display: block;
-    width: 235px;
+    width: 240px;
   }
 
 }
@@ -916,10 +1005,10 @@
   --transition: .75s cubic-bezier(.2, .6, 0, 1);
 }
 
-body,
-html {
-  overflow-x: hidden;
-}
+// body,
+// html {
+//   overflow-x: hidden;
+// }
 
 .slider {
   height: 100%;

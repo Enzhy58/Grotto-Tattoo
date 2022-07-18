@@ -73,13 +73,6 @@
               <img class="top__img" src="images/top.jpg" alt="">
               <span class="top__name">Tattoo</span>
             </div>
-            <div class="top__phone">
-              <a href="#" class="top__phone-link">
-                <svg class="top__phone-img">
-                  <use xlink:href="images/sprite.svg#phone--top"></use>
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -398,7 +391,7 @@
             <input class="request__field" type="text" placeholder="Ваше имя" name="name" id="name" required>
             <input class="request__field" type="tel" placeholder="Ваше телефон" name="tel" id="tel" required>
             <input class="request__field" type="e-mail" placeholder="Ваше E-mail" name="e-mail" id="e-mail" required>
-            <select class="request__field select-style" request>
+            <select class="select-style" request>
               <option value="">Выберете услугу</option>
               <option value="">Художественная татуировка</option>
               <option value="">Перекрытие тату</option>
@@ -408,11 +401,17 @@
             <textarea class="request__field request__field--textarea"
               placeholder="Опишите, что хотите сделать. Размер, место нанесения, стиль, как с Вами удобнее связаться."
               name="message" id="message" required></textarea>
-            <label class="request__label-age">
-              <input class="request__input-age" type="checkbox">
-              <span class="request__checkbox-age"></span>
-              Мне есть 18 и я согласен/согласна на обработку персональных данных
-            </label>
+
+            <div class="request__box">
+              <label class="request__label-age">
+                <input class="request__input-age" type="checkbox">
+                <span class="request__checkbox-age"></span>
+                Мне есть 18 и я согласен/согласна на обработку персональных данных
+              </label>
+
+              <a class="request__add" href="#">Прикрепить файл</a>
+            </div>
+
             <a class="btn request__btn" href="#">Отправить</a>
           </form>
         </div>
