@@ -241,7 +241,6 @@
   }
   &__title {
     color: $silver;
-    margin-bottom: 90px;
     z-index: 10;
   }
   &__inner {
@@ -280,7 +279,6 @@
 .gallery {
   &__title {
     color: $silver;
-    margin-bottom: 60px;
   }
   &__content {
     column-count: 4;
@@ -293,36 +291,16 @@
   &__link {
     position: relative;
   }
-  &__link:hover .gallery__zoom {
+  &__link:hover .zoom {
     opacity: 1;
   }
   &__img {
     width: 100%;
   }
-  &__zoom {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba($dark, 0.7);
-    border: 3px solid $silver;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    opacity: 0;
-  }
-  &__zoom-img {
-    width: 75px;
-    height: 75px;
-    fill: $silver;
-  }
-
 }
 
 .reviews {
-  padding-bottom: 194px;
+  padding-bottom: 180px;
 
   &__inner {
     display: flex;
@@ -498,7 +476,6 @@
 }
 
 .offers {
-  padding: 120px 0;
   background-color: $white;
   &__inner {
     display: flex;
@@ -519,7 +496,7 @@
       height: 330px;
       top: 0;
       right: 0;
-      background-color: rgba($dark, 0.3);
+      background-color: rgba($dark, 0.2);
     }
     &::after {
       content: '';
@@ -530,10 +507,14 @@
       right: 3%;
       background-color: transparent;
       border: 2px solid $silver;
+      transition: all 0.5s;
+      opacity: 0;
     }
     &:not(:last-child) {
       margin-right: 26px;
     }
+  } &__box:hover::after {
+    opacity: 1;
   }
   &__text {
    font-weight: $fw-700;
@@ -549,7 +530,7 @@
 }
 
 .request {
-  padding: 120px 0;
+
   &__title {
     color: $silver;
   }
@@ -628,7 +609,7 @@
   &__title {
     color: $silver;
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
   &__phone,
   &__email {
@@ -675,7 +656,7 @@
 
 .footer {
   background-color: $dark;
-  padding: 40px;
+  padding: 10px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -696,6 +677,7 @@
   }
   &__list-footer {
     flex-direction: column;
+    align-items: center;
     margin-right: 0;
   }
   &__item-footer {
@@ -745,7 +727,7 @@
         left: 0;
         z-index: -1;
         background-color: transparent;
-        border: 1px solid $dark;
+        border: 2px solid $dark;
       }
   }
   &__img {
@@ -776,6 +758,15 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 26px;
     margin-bottom: 38px;
+  }
+  &__link {
+    display: block;
+    width: 283px;
+    height: 190px;
+    position: relative;
+  }
+  &__link:hover .zoom {
+    opacity: 1;
   }
   &__btn {
     color: $silver;
