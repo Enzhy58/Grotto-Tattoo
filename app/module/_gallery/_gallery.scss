@@ -25,3 +25,32 @@
     width: 100%;
   }
 }
+
+@media (max-width: 992px) {
+  .gallery {
+    &__content {
+      column-count: 3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    &__content {
+      column-count: 2;
+    }
+    &__btn {
+      display: block;
+      margin: 0 auto;
+      width: 240px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 480px) {
+ 
+}

@@ -53,3 +53,33 @@
     transition: width 0.3s, height 0.3s;
   }
 }
+
+
+@media (max-width: 992px) {
+  .about {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__text {
+      max-width: 100%;
+      margin-bottom: 50px;
+      margin-right: 0;
+      text-align: center;
+    }
+    &__video {
+      max-width: 650px;
+    }
+  }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 480px) {
+  .about {
+    &__text p:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
