@@ -1,5 +1,7 @@
 .contacts {
-  position: relative;
+  &__map {
+    position: relative;
+  }
 
   &__box {
     padding: 48px 48px 53px 90px;
@@ -8,8 +10,9 @@
     height: 100%;
     background-color: $dark;
     position: absolute;
+    z-index: 2;
     top: 10%;
-    right: 60%;
+    right: 50%;
   }
 
   &__title {
@@ -65,4 +68,44 @@
       background-image: url("../images/icons/place.svg");
     }
   }
+}
+
+
+
+@media (max-width: 992px) {
+  .contacts {
+    &__box {
+      position: relative;
+      top: 0;
+      right: 0;
+      max-width: 100%;
+    }
+    &__phone::before,
+    &__email::before,
+    &__place::before {
+      left: -55px;
+    }
+  }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+  .contacts {
+    &__box {
+      padding-left: 60px;        
+    }
+    &__phone,
+    &__email {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    &__place {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+ 
 }
