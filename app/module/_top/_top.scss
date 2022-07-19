@@ -1,0 +1,72 @@
+.top {
+  height: 100vh;
+  padding-top: 80px;
+  color: $silver;
+  background: linear-gradient(175deg, rgba($dark, 1) 68%, rgba($dark, 1) 67%, rgba($white, 1) 68.1%);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 515px;
+    margin-right: 130px;
+  }
+
+  &__title {
+    font-family: $playfairdisplay, sans-serif;
+    font-weight: $fw-700;
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+
+  &__name {
+    font-family: $racingsansone, sans-serif;
+    font-size: 96px;
+    line-height: 121px;
+    color: rgba($accent, 0.8);
+    transform: rotate(-90deg);
+    z-index: 10;
+    right: 70%;
+    bottom: 16%;
+    position: absolute;
+  }
+
+  &__name:last-child {
+    transform: rotate(90deg);
+    right: -40%;
+    bottom: 62%;
+  }
+
+  &__box {
+    position: relative;
+    box-shadow: 2px 2px 14px 1px rgba($black, 0.4);
+    border-radius: 50px;
+  }
+
+  &__phone {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background-color: $accent;
+    position: absolute;
+    right: 15%;
+    bottom: 22%;
+    z-index: 999;
+
+    &-img {
+      margin: 20% 20%;
+      fill: $silver;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+}

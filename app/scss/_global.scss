@@ -55,6 +55,48 @@ body {
   color: $accent;
 }
 
+.menu {
+  display: flex;
+
+  &__box {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    margin-right: 70px;
+  }
+
+  &__item {
+    font-weight: $fw-700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $accent;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+  }
+
+  &__img {
+    width: 34px;
+    height: 34px;
+    fill: $white;
+  }
+}
+
 .btn {
   width: 212px;
   height: 56px;

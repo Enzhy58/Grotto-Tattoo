@@ -1,0 +1,61 @@
+.offers {
+  background-color: $white;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__box {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 330px;
+    height: 330px;
+    width: 100%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      top: 0;
+      right: 0;
+      background-color: rgba($dark, 0.2);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 311px;
+      height: 311px;
+      top: 3%;
+      right: 3%;
+      background-color: transparent;
+      border: 2px solid $silver;
+      transition: all 0.5s;
+      opacity: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+  }
+
+  &__box:hover::after {
+    opacity: 1;
+  }
+
+  &__text {
+    font-weight: $fw-700;
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    z-index: 10;
+  }
+}

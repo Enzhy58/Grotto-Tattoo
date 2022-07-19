@@ -1,0 +1,27 @@
+.gallery {
+  &__title {
+    color: $silver;
+  }
+
+  &__content {
+    column-count: 4;
+    column-gap: 13px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 13px;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__link:hover .zoom {
+    opacity: 1;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
