@@ -29,8 +29,10 @@
     &::after {
       content: '';
       position: absolute;
-      width: 311px;
-      height: 311px;
+      max-width: 311px;
+      max-height: 311px;
+      height: 100%;
+      width: 94%;
       top: 3%;
       right: 3%;
       background-color: transparent;
@@ -63,14 +65,32 @@
 
 @media (max-width: 992px) {
   .offers {
-    &__inner {
-      flex-direction: column;
-      align-items: center;
+    &__box {
+      &:not(:last-child) {
+        margin-right: 7px;
+        margin-bottom: 20px;
+      }
+    }
+    &__text {
+      padding-left: 14px;
+      font-size: 16px;
     }
   }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .offers {
+      &__inner {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__box {
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+}
 
 @media (max-width: 576px) {
   
