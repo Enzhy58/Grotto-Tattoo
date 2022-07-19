@@ -38,3 +38,28 @@
   }
 
 }
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+    }
+    .menu__box-footer {
+      margin-bottom: 20px;
+    }
+    &__text {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  
+}
+
+@media (max-width: 480px) {
+ 
+}
