@@ -29,6 +29,11 @@ sliderMain.on('slideChange', e => {
 
 
 $(function(){
+  $('.menu__btn, .menu__link').on('click', function () {
+    $('.menu__box').toggleClass('menu__box--active');
+    $('.menu__btn').toggleClass('menu__btn--active');
+    $('.wrapper').toggleClass('wrapper__fixed');
+  });
   $('.content-slide__thumb').slick({
     asNavFor: '.content-slide__big',
     focusOnSelect: true,

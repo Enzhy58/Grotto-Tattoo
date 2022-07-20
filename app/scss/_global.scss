@@ -57,6 +57,43 @@ body {
 
 .menu {
   display: flex;
+    &__btn {
+      width: 30px;
+      height: 22px;
+      z-index: 1;
+      position: relative;
+      transition-duration: 1s;
+      display: none;
+    }
+  
+    &__open {
+      transition-delay: 0.25s;
+    }
+  
+    &__open,
+    &__open::after,
+    &__open::before {
+      height: 2px;
+      background-color: #fff;
+      transition-duration: 0.1s;
+    }
+  
+    &__open::after,
+    &__open::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      transition: transform 0.25s, top 0.25s 0.25s;
+    }
+  
+    &__open::after {
+      bottom: 0;
+    }
+  
+    &__open::before {
+      top: 0;
+    }
 
   &__box {
     margin-left: auto;
@@ -66,7 +103,7 @@ body {
 
   &__list {
     display: flex;
-    margin-right: 70px;
+    margin-right: 50px;
   }
 
   &__item {
@@ -100,7 +137,7 @@ body {
 .btn {
   width: 212px;
   height: 56px;
-  padding: 17px 58px;
+  padding: 17px 55px;
   border: 2px solid $accent;
   color: $accent;
   font-family: $firasans, sans-serif;
@@ -140,7 +177,78 @@ body {
 
 @media (max-width: 992px) {}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .wrapper__fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+  .menu {
+    justify-content: space-between;
+    align-items: center;
+    &__box,
+    &__list,
+    &__link,
+    &__btn,
+    &__open {
+      display: block;
+    }
+    &__btn {
+      z-index: 3;
+    }
+    
+    &__btn--active .menu__open {
+      transition-duration: 0.1s;
+      transition-delay: 0.25s;
+      background-color: transparent;
+    }
+    
+    &__btn--active .menu__open:before {
+      transition: top 0.25s, transform 0.25s 0.25s;
+      top: 40%;
+      transform: rotateZ(-45deg);
+    }
+    
+    &__btn--active .menu__open:after {
+      transition: top 0.4s, transform 0.25s 0.25s;
+      top: 40%;
+      transform: rotateZ(45deg);
+    }
+    
+    &__box {
+      position: absolute;
+      overflow: scroll;
+      height: 100vh;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: $dark;
+      text-align: center;
+      z-index: 2;
+      padding: 120px 0 14px;
+      transform: translateY(-200%);
+      transition: transform 0.5s;
+    }
+    
+    &__box.menu__box--active {
+      transform: translateY(0);
+    }
+    &__list {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+  }
+  .social {
+    justify-content: center;
+  }
+  .logo {
+    z-index: 3;
+  }
+}
 
 @media (max-width: 576px) {
   .page-section {
