@@ -6,7 +6,11 @@
 
 @media (max-width: 992px) {}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+}
 
 @media (max-width: 576px) {
  

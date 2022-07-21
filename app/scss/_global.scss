@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -247,6 +248,10 @@ body {
   }
   .logo {
     z-index: 3;
+    &__img {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 

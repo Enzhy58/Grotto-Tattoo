@@ -64,11 +64,18 @@
 }
 
 
-@media (max-width: 992px) {}
+@media (max-width: 1070px) {
+  .services {
+    padding-top: 110px;
+    &__list {
+      margin-top: 0;
+    }
+  }
+}
 @media (max-width: 768px) {}
 @media (max-width: 576px) {
   .services {
-    
+    padding-top: 50px;
   }
 }
 @media (max-width: 480px) {
