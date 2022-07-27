@@ -39,6 +39,16 @@ $(function(){
     ]
   });
 
+  $('.tabs__link').on('click', function (e) {
+    e.preventDefault();
+    $('.tabs__link').removeClass('tabs__link--active');
+    $(this).addClass('tabs__link--active');
+
+    $('.tabs__content').removeClass('tabs__content--active');
+    $($(this).attr('href')).addClass('tabs__content--active');
+  });
+
+
   $('.select-style').styler();
 
 
