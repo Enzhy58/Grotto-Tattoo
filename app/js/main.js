@@ -9,8 +9,8 @@ $(function(){
     var id = $(this).attr('href'), top = $(id).offset().top;
     $('body, html').animate({ scrollTop: top }, 1500);
   });
-  $('.content-slide__thumb').slick({
-    asNavFor: '.content-slide__big',
+  $('.slide__thumb').slick({
+    asNavFor: '.slide__big',
     focusOnSelect: true,
     slidesToShow: 4,
     slideToScroll: 1,
@@ -18,8 +18,8 @@ $(function(){
     draggable: false
   });
 
-  $('.content-slide__big').slick({
-    asNavFor: '.content-slide__thumb',
+  $('.slide__big').slick({
+    asNavFor: '.slide__thumb',
     draggable: false,
     arrows: false
   });
