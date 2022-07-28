@@ -79,6 +79,7 @@
 
   &__content {
     display: flex;
+    align-items: flex-start;
   }
 
   &__content.removal {
@@ -118,8 +119,6 @@
       margin-bottom: 15px;
     }
   }
-
-
 
   &__content-list {
     list-style: disc;
@@ -235,8 +234,8 @@
 
 .hide {
 
-  &__img:first-child {
-    margin-bottom: 20px;
+  &__img {
+    align-self: center;
   }
 
   .tabs__content-box {
@@ -247,5 +246,17 @@
 .drowing {
   &__img {
     margin-right: 60px;
+  }
+}
+
+.training {
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 22px;
+    margin-right: 60px;
+  }
+  &__item:last-child {
+    grid-column: span 2;
   }
 }
