@@ -1,8 +1,6 @@
 .services {
-  background-color: $white;
 
   &__list {
-    margin-top: -100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,7 +10,7 @@
   &__item {
     position: relative;
     margin-right: 122px;
-    
+
 
     &::before {
       content: '';
@@ -26,9 +24,6 @@
   }
 
   &__link {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 278px;
     height: 176px;
     margin-bottom: 143px;
@@ -55,34 +50,15 @@
     line-height: 31px;
     color: $white;
     max-width: 175px;
-    position: relative;
-    display: block;
     text-align: center;
     z-index: 2;
-    margin: auto;
   }
 }
 
 
-@media (max-width: 1070px) {
-  .services {
-    padding-top: 110px;
-    &__list {
-      margin-top: 0;
-    }
-  }
-}
-@media (max-width: 768px) {}
-@media (max-width: 576px) {
-  .services {
-    padding-top: 50px;
-  }
-}
 @media (max-width: 480px) {
   .services {
-    &__list {
-      margin-right: 0;
-    }
+    &__list,
     &__item {
       margin-right: 0;
     }

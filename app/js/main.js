@@ -1,27 +1,15 @@
 $(function(){
+
   $('.menu__btn, .menu__link').on('click', function () {
     $('.menu__box').toggleClass('menu__box--active');
     $('.menu__btn').toggleClass('menu__btn--active');
     $('.wrapper').toggleClass('wrapper__fixed');
   });
+
   $('.menu a, .btn, .logo').on('click', function (e) {
     e.preventDefault();
     var id = $(this).attr('href'), top = $(id).offset().top;
     $('body, html').animate({ scrollTop: top }, 1500);
-  });
-  $('.slide__thumb').slick({
-    asNavFor: '.slide__big',
-    focusOnSelect: true,
-    slidesToShow: 4,
-    slideToScroll: 1,
-    vertical: true,
-    draggable: false
-  });
-
-  $('.slide__big').slick({
-    asNavFor: '.slide__thumb',
-    draggable: false,
-    arrows: false
   });
 
   $('.reviews__slider').slick({
@@ -33,7 +21,9 @@ $(function(){
       {
         breakpoint: 768,
         settings: {
-          dots: false
+          dots: false,
+          arrows: false,
+          autoplay: true
         }
       }
     ]
@@ -48,9 +38,44 @@ $(function(){
     $($(this).attr('href')).addClass('tabs__content--active');
   });
 
+  $('.slide__thumb').slick({
+    asNavFor: '.slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slideToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+
+  $('.slide__big').slick({
+    asNavFor: '.slide__thumb',
+    draggable: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          draggable: true,
+        }
+      },
+    ]
+  });
+
 
   $('.select-style').styler();
 
 
 });
+
+document.getElementById('team').onclick = function () {
+  window.location.href = 'team.html';
+};
+document.getElementById('home').onclick = function () {
+  window.location.href = 'index.html';
+};
+document.getElementById('services').onclick = function () {
+  window.location.href = 'services.html';
+};
+
+
 

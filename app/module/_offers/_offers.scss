@@ -1,5 +1,4 @@
 .offers {
-  background-color: $white;
 
   &__inner {
     display: flex;
@@ -7,9 +6,6 @@
   }
 
   &__box {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     max-width: 330px;
     height: 330px;
     width: 100%;
@@ -29,16 +25,14 @@
     &::after {
       content: '';
       position: absolute;
-      max-width: 311px;
       max-height: 311px;
       height: 100%;
       width: 94%;
       top: 3%;
       right: 3%;
-      background-color: transparent;
       border: 2px solid $silver;
-      transition: all 0.5s;
       opacity: 0;
+      transition: opacity 0.5s;
     }
 
     &:not(:last-child) {
@@ -71,6 +65,7 @@
         margin-bottom: 20px;
       }
     }
+
     &__text {
       padding-left: 14px;
       font-size: 16px;
@@ -80,22 +75,15 @@
 
 @media (max-width: 768px) {
   .offers {
-      &__inner {
-        flex-direction: column;
-        align-items: center;
-      }
-      &__box {
-        &:not(:last-child) {
-          margin-right: 0;
-        }
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__box {
+      &:not(:last-child) {
+        margin-right: 0;
       }
     }
-}
-
-@media (max-width: 576px) {
-  
-}
-
-@media (max-width: 480px) {
-  
+  }
 }

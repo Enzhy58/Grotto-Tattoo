@@ -1,4 +1,6 @@
 .about {
+  background-color: $gray;
+
   &__inner {
     display: flex;
     justify-content: space-around;
@@ -15,60 +17,12 @@
   }
 
   &__video {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     max-width: 530px;
     height: 353px;
-    width: 100%;
-    position: relative;
-  }
-
-  &__video::before,
-  &__video::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-
-  &__video::before {
-    top: 0;
-    bottom: 0;
-    background-color: #000;
-    opacity: 0.3;
-    transition: opacity 0.3s;
   }
 
   &__video::after {
     background-image: url("../images/icons/about.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 86px;
-    height: 100px;
-    transition: width 0.3s, height 0.3s;
-  }
-
-  &__video:hover::before {
-    opacity: 0.6;
-  }
-
-  &__video:active::before {
-    opacity: 0.45;
-  }
-
-  &__video:hover::after {
-    width: 129px;
-    height: 150px;
-  }
-
-  &__video:active::after {
-    width: 51px;
-    height: 60px;
   }
 }
 
@@ -91,10 +45,6 @@
     }
   }
 }
-
-@media (max-width: 768px) {}
-
-@media (max-width: 576px) {}
 
 @media (max-width: 480px) {
   .about {

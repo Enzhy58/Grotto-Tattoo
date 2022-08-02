@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  background-color: $gray;
+  background-color: $white;
   color: $silver;
   font-family: $firasans, sans-serif;
   font-weight: $fw-400;
@@ -59,43 +59,44 @@ body {
 
 .menu {
   display: flex;
-    &__btn {
-      width: 30px;
-      height: 22px;
-      z-index: 1;
-      position: relative;
-      transition-duration: 1s;
-      display: none;
-    }
-  
-    &__open {
-      transition-delay: 0.25s;
-    }
-  
-    &__open,
-    &__open::after,
-    &__open::before {
-      height: 2px;
-      background-color: #fff;
-      transition-duration: 0.1s;
-    }
-  
-    &__open::after,
-    &__open::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      transition: transform 0.25s, top 0.25s 0.25s;
-    }
-  
-    &__open::after {
-      bottom: 0;
-    }
-  
-    &__open::before {
-      top: 0;
-    }
+
+  &__btn {
+    width: 30px;
+    height: 22px;
+    z-index: 1;
+    position: relative;
+    transition-duration: 1s;
+    display: none;
+  }
+
+  &__open {
+    transition-delay: 0.25s;
+  }
+
+  &__open,
+  &__open::after,
+  &__open::before {
+    height: 2px;
+    background-color: #fff;
+    transition-duration: 0.1s;
+  }
+
+  &__open::after,
+  &__open::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: transform 0.25s, top 0.25s 0.25s;
+  }
+
+  &__open::after {
+    bottom: 0;
+  }
+
+  &__open::before {
+    top: 0;
+  }
 
   &__box {
     margin-left: auto;
@@ -148,6 +149,7 @@ body {
   line-height: 22px;
   border-radius: 30px;
   transition: all 0.3s;
+
   &:hover {
     background-color: $accent;
     color: $silver;
@@ -167,17 +169,72 @@ body {
   align-items: center;
   transition: all 0.3s;
   opacity: 0;
+
   &__img {
     width: 75px;
     height: 75px;
     fill: $silver;
   }
+
   &--team {
     border: 3px solid $black;
   }
 }
 
-@media (max-width: 992px) {}
+.video {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &::before {
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 86px;
+    height: 100px;
+    transition: width 0.3s, height 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.45;
+  }
+
+  &:hover::after {
+    width: 129px;
+    height: 150px;
+  }
+
+  &:active::after {
+    width: 51px;
+    height: 60px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .wrapper__fixed {
@@ -185,9 +242,11 @@ body {
     left: 0;
     right: 0;
   }
+
   .menu {
     justify-content: space-between;
     align-items: center;
+
     &__box,
     &__list,
     &__link,
@@ -195,28 +254,29 @@ body {
     &__open {
       display: block;
     }
+
     &__btn {
       z-index: 3;
     }
-    
+
     &__btn--active .menu__open {
       transition-duration: 0.1s;
       transition-delay: 0.25s;
       background-color: transparent;
     }
-    
+
     &__btn--active .menu__open:before {
       transition: top 0.25s, transform 0.25s 0.25s;
       top: 40%;
       transform: rotateZ(-45deg);
     }
-    
+
     &__btn--active .menu__open:after {
       transition: top 0.4s, transform 0.25s 0.25s;
       top: 40%;
       transform: rotateZ(45deg);
     }
-    
+
     &__box {
       position: absolute;
       overflow: scroll;
@@ -231,24 +291,29 @@ body {
       transform: translateY(-200%);
       transition: transform 0.5s;
     }
-    
+
     &__box.menu__box--active {
       transform: translateY(0);
     }
+
     &__list {
       margin-right: 0;
       margin-bottom: 30px;
     }
+
     &__item:not(:last-child) {
       margin-right: 0;
       margin-bottom: 25px;
     }
   }
+
   .social {
     justify-content: center;
   }
+
   .logo {
     z-index: 3;
+
     &__img {
       width: 60px;
       height: 60px;
@@ -260,6 +325,7 @@ body {
   .page-section {
     padding: 50px 0;
   }
+
   .title {
     margin-bottom: 30px;
     font-size: 35px;
@@ -271,5 +337,3 @@ body {
     font-size: 17px;
   }
 }
-
-

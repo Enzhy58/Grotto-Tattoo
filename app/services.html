@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  <div class="wrapper" id="home">
+  <div class="wrapper">
     <header class="header">
   <div class="container">
 
     <nav class="menu">
 
-      <a class="logo" href="#home">
+      <a class="logo" href="#" id="home">
         <img class="logo__img" src="images/logo.png" alt="логотип" width="85" height="85">
       </a>
 
@@ -30,10 +30,10 @@
       <div class="menu__box">
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="#services">Услуги</a>
+            <a class="menu__link" href="#" id="services">Услуги</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Мастера</a>
+            <a class="menu__link" href="#" id="team">Мастера</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#gallery">Галерея</a>
@@ -44,17 +44,23 @@
         </ul>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="#" target="_blank">
               <svg class="social__img">
                 <use xlink:href="images/sprite.svg#instagram"></use>
               </svg>
+              <span class="sr-only">
+                инстаграм
+              </span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="#" target="_blank">
               <svg class="social__img">
                 <use xlink:href="images/sprite.svg#vk"></use>
               </svg>
+              <span class="sr-only">
+                вконтакте
+              </span>
             </a>
           </li>
         </ul>
@@ -64,7 +70,7 @@
   </div>
 </header>
     <main class="main">
-      <section class="tabs page-section">
+      <section class="tabs">
   <div class="container">
     <div class="tabs__inner">
       <h2 class="title tabs__title">Услуги</h2>
@@ -98,35 +104,35 @@
 
       <div class="tabs__content tabs__content--active tattoo" id="tab-1">
         <div class="slide">
-          <div class="slide__thumb">
-            <div class="slide__thumb-item">
+          <ul class="slide__thumb">
+            <li class="slide__thumb-item">
               <img src="images/services/1.jpg" alt="">
-            </div>
-            <div class="slide__thumb-item">
+            </li>
+            <li class="slide__thumb-item">
               <img src="images/services/2.jpg" alt="">
-            </div>
-            <div class="slide__thumb-item">
+            </li>
+            <li class="slide__thumb-item">
               <img src="images/services/3.jpg" alt="">
-            </div>
-            <div class="slide__thumb-item">
+            </li>
+            <li class="slide__thumb-item">
               <img src="images/services/4.jpg" alt="">
-            </div>
-          </div>
-          <div class="slide__big">
-            <div class="slide__big-item">
+            </li>
+          </ul>
+          <ul class="slide__big">
+            <li class="slide__big-item">
               <img src="images/services/1--big.jpg" alt="">
-            </div>
-            <div class="slide__big-item">
+            </li>
+            <li class="slide__big-item">
               <img src="images/services/2--big.jpg" alt="">
-            </div>
-            <div class="slide__big-item">
+            </li>
+            <li class="slide__big-item">
               <img src="images/services/3--big.jpg" alt="">
-            </div>
-            <div class="slide__big-item">
+            </li>
+            <li class="slide__big-item">
               <img src="images/services/4--big.jpg" alt="">
-            </div>
+            </li>
 
-          </div>
+          </ul>
         </div>
 
         <div class="tabs__content-box">
@@ -226,10 +232,10 @@
 
         </div>
 
-        <a class="removal__video" data-fancybox href="http://www.youtube.com/watch?v=0O2aH4XLbto"
+        <a class="removal__video video" data-fancybox href="http://www.youtube.com/watch?v=0O2aH4XLbto"
           style="background-image: url(images/services/removal/1.jpg);">
           <span class="sr-only">
-            Видеоэкскурсия по тату студии
+            Видео процесса удаления тату лазером
           </span>
         </a>
         <a class="btn tabs__content-btn" href="#request">Записаться</a>
@@ -366,6 +372,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#instagram"></use>
                 </svg>
+                <span class="sr-only">
+                  инстаграм
+                </span>
               </a>
             </li>
             <li class="social__item">
@@ -373,6 +382,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#vk"></use>
                 </svg>
+                <span class="sr-only">
+                  вконтакте
+                </span>
               </a>
             </li>
             <li class="social__item">
@@ -380,6 +392,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#youtube"></use>
                 </svg>
+                <span class="sr-only">
+                  ютуб
+                </span>
               </a>
             </li>
             <li class="social__item">
@@ -387,6 +402,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#telegram"></use>
                 </svg>
+                <span class="sr-only">
+                  телеграм
+                </span>
               </a>
             </li>
           </ul>
@@ -397,7 +415,7 @@
           Набивай с нами!
         </p>
       </div>
-      <a class="logo" href="#home">
+      <a class="logo" href="#">
         <img class="logo__img" src="images/logo.png" alt="логотип" width="85" height="85">
       </a>
     </div>

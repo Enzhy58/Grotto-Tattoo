@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  <div class="wrapper" id="home">
+  <div class="wrapper">
     <header class="header">
   <div class="container">
 
     <nav class="menu">
 
-      <a class="logo" href="#home">
+      <a class="logo" href="#" id="home">
         <img class="logo__img" src="images/logo.png" alt="логотип" width="85" height="85">
       </a>
 
@@ -30,10 +30,10 @@
       <div class="menu__box">
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="#services">Услуги</a>
+            <a class="menu__link" href="#" id="services">Услуги</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Мастера</a>
+            <a class="menu__link" href="#" id="team">Мастера</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#gallery">Галерея</a>
@@ -44,17 +44,23 @@
         </ul>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="#" target="_blank">
               <svg class="social__img">
                 <use xlink:href="images/sprite.svg#instagram"></use>
               </svg>
+              <span class="sr-only">
+                инстаграм
+              </span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" href="#" target="_blank">
               <svg class="social__img">
                 <use xlink:href="images/sprite.svg#vk"></use>
               </svg>
+              <span class="sr-only">
+                вконтакте
+              </span>
             </a>
           </li>
         </ul>
@@ -68,7 +74,6 @@
       <section class="top">
   <div class="container">
     <div class="top__inner">
-
       <div class="top__content">
         <h1 class="top__title">Студия художественной татуировки</h1>
         <span class="top__subtitle">Grotto Tattoo</span>
@@ -87,7 +92,7 @@
     </div>
   </div>
 </section>
-      <section class="services" id="services">
+      <section class="services page-section" id="services">
   <div class="container">
     <h2 class="sr-only">Услуги</h2>
     <ul class="services__list">
@@ -143,7 +148,7 @@
         </p>
       </div>
 
-      <a class="about__video" data-fancybox href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(images/about.jpg);">
+      <a class="about__video video" data-fancybox href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(images/about.jpg);">
         <span class="sr-only">
           Видеоэкскурсия по тату студии
         </span>
@@ -176,7 +181,7 @@
     <h2 class="title gallery__title">Работы наших мастеров</h2>
     <ul class="gallery__content">
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/1.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/1.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/1.jpg" alt="работа-1">
           <span class="zoom">
             <svg class="zoom__img">
@@ -186,7 +191,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/2.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/2.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/2.jpg" alt="работа-2">
           <span class="zoom">
             <svg class="zoom__img">
@@ -196,7 +201,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/3.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/3.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/3.jpg" alt="работа-3">
           <span class="zoom">
             <svg class="zoom__img">
@@ -206,7 +211,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/4.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/4.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/4.jpg" alt="работа-4">
           <span class="zoom">
             <svg class="zoom__img">
@@ -216,7 +221,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/5.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/5.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/5.jpg" alt="работа-5">
           <span class="zoom">
             <svg class="zoom__img">
@@ -226,7 +231,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/6.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/6.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/6.jpg" alt="работа-6">
           <span class="zoom">
             <svg class="zoom__img">
@@ -236,7 +241,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/7.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/7.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/7.jpg" alt="работа-7">
           <span class="zoom">
             <svg class="zoom__img">
@@ -246,7 +251,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/8.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/8.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/8.jpg" alt="работа-8">
           <span class="zoom">
             <svg class="zoom__img">
@@ -256,7 +261,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/9.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/9.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/9.jpg" alt="работа-9">
           <span class="zoom">
             <svg class="zoom__img">
@@ -266,7 +271,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/10.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/10.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/10.jpg" alt="работа-10">
           <span class="zoom">
             <svg class="zoom__img">
@@ -276,7 +281,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/11.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/11.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/11.jpg" alt="работа-11">
           <span class="zoom">
             <svg class="zoom__img">
@@ -286,7 +291,7 @@
         </a>
       </li>
       <li class="gallery__item">
-        <a class="gallery__link" href="images/gallery/12.jpg" data-fancybox="images" data-width="2048" data-height="1365">
+        <a class="gallery__link" href="images/gallery/big/12.jpg" data-fancybox="images" data-width="2048" data-height="1365">
           <img class="gallery__img" src="images/gallery/12.jpg" alt="работа-12">
           <span class="zoom">
             <svg class="zoom__img">
@@ -375,7 +380,7 @@
       <section class="offers page-section">
   <div class="container">
     <h2 class="sr-only">Предложения</h2>
-    <div class="offers__inner">
+    <ul class="offers__inner">
       <a class="offers__box" style="background-image: url(images/offers/1.jpg);" href="#">
         <span class="offers__text">Мини тату от 5000 руб</span>
       </a>
@@ -385,7 +390,7 @@
       <a class="offers__box" style="background-image: url(images/offers/3.jpg);" href="#">
         <span class="offers__text">Тату надпись от 3000 руб</span>
       </a>
-    </div>
+    </г>
   </div>
 </section>
       <section class="request page-section" id="request">
@@ -422,11 +427,11 @@
 </section>
       <section class="contacts">
   <div class="contacts__map">
-    
+
     <div class="contacts__box">
-    
+
       <h2 class="title contacts__title">Контакты</h2>
-    
+
       <address class="contacts__address">
         <a href="tel:+79273748686" class="contacts__phone">+79273748686</a>
         <a href="mailto:grotto_tattoo@yandex.ru" class="contacts__email">grotto_tattoo@yandex.ru</a>
@@ -438,25 +443,29 @@
           </p>
         </div>
       </address>
-    
+
       <div class="contacts__text">
         <p>
           Ждем Вас каждый день с 12:00 до 22:00
         </p>
       </div>
-    
+
     </div>
-   
-    <div style="position:relative; overflow:hidden; pointer-events: none;"><a
-        href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-        style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a
-        href="https://yandex.ru/maps/2/saint-petersburg/house/suvorovskiy_prospekt_10/Z0kYdQFpTEEFQFtjfXVycnVjYg==/?ll=30.374959%2C59.935003&utm_medium=mapframe&utm_source=maps&z=14.44"
-        style="color:#eee;font-size:12px;position:absolute;top:14px;">Суворовский проспект, 10 на карте
+
+    <div style="position:relative; overflow:hidden;">
+      <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">
+        Санкт‑Петербург
+      </a>
+      <a href="https://yandex.ru/maps/2/saint-petersburg/house/suvorovskiy_prospekt_10/Z0kYdQFpTEEFQFtjfXVycnVjYg==/?ll=30.374959%2C59.935003&utm_medium=mapframe&utm_source=maps&z=14.44"
+        style="color:#eee;font-size:12px;position:absolute;top:14px;">
+        Суворовский проспект, 10 на карте
         Санкт‑Петербурга,
-        ближайшее метро Площадь Восстания — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUNRIa0DD"
-        width="100%" height="700" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        ближайшее метро Площадь Восстания — Яндекс Карты
+      </a>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCUNRIa0DD" width="100%" height="700" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
     </div>
-  
+
   </div>
 </section>
     </main>
@@ -472,6 +481,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#instagram"></use>
                 </svg>
+                <span class="sr-only">
+                  инстаграм
+                </span>
               </a>
             </li>
             <li class="social__item">
@@ -479,6 +491,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#vk"></use>
                 </svg>
+                <span class="sr-only">
+                  вконтакте
+                </span>
               </a>
             </li>
             <li class="social__item">
@@ -486,6 +501,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#youtube"></use>
                 </svg>
+                <span class="sr-only">
+                  ютуб
+                </span>
               </a>
             </li>
             <li class="social__item">
@@ -493,6 +511,9 @@
                 <svg class="social__img">
                   <use xlink:href="images/sprite.svg#telegram"></use>
                 </svg>
+                <span class="sr-only">
+                  телеграм
+                </span>
               </a>
             </li>
           </ul>
@@ -503,7 +524,7 @@
           Набивай с нами!
         </p>
       </div>
-      <a class="logo" href="#home">
+      <a class="logo" href="#">
         <img class="logo__img" src="images/logo.png" alt="логотип" width="85" height="85">
       </a>
     </div>

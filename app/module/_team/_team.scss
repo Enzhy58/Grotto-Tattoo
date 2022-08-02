@@ -1,5 +1,5 @@
 .team {
-  background-color: $silver;
+  padding-top: 150px;
   color: $dark;
 
   &__title {
@@ -27,17 +27,6 @@
 
   &__content:nth-child(odd) {
     margin-right: 60px;
-    // position: relative;
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   width: 438px;
-    //   height: 277px;
-    //   top: 10%;
-    //   left: 0;
-    //   background-color: transparent;
-    //   border: 2px solid $dark;
-    // }
   }
 
   &__content:nth-child(even) {
@@ -119,6 +108,7 @@
     &__content:nth-child(even) {
       margin-right: 0;
     }
+
     &__content:nth-child(2) {
       margin-left: 0;
     }
@@ -141,14 +131,18 @@
 
 @media (max-width: 576px) {
   .team {
+    padding-top: 95px;
+
     &__top {
       margin-bottom: 50px;
     }
+
     &__item {
       &:not(:last-child) {
         margin-bottom: 50px;
       }
     }
+
     &__content {
       flex-direction: column;
     }
@@ -171,6 +165,7 @@
     &__box {
       grid-template-columns: repeat(1, 1fr);
     }
+
     &__link {
       margin: 0 auto;
     }

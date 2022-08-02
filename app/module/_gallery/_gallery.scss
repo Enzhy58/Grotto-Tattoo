@@ -1,4 +1,6 @@
 .gallery {
+  background-color: $gray;
+
   &__title {
     color: $silver;
   }
@@ -39,18 +41,11 @@
     &__content {
       column-count: 2;
     }
+
     &__btn {
       display: block;
       margin: 0 auto;
       width: 240px;
     }
   }
-}
-
-@media (max-width: 576px) {
-
-}
-
-@media (max-width: 480px) {
- 
 }

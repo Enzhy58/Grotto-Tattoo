@@ -1,8 +1,9 @@
 .top {
-  height: 120vh;
-  padding-top: 130px;
+  height: 110vh;
+  padding-top: 160px;
   color: $silver;
-  background: linear-gradient(175deg, rgba($dark, 1) 68%, rgba($dark, 1) 67%, rgba($white, 1) 68.1%);
+  background-color: $black;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
 
   &__inner {
     display: flex;
@@ -53,33 +54,13 @@
   &__box {
     position: relative;
     box-shadow: 2px 2px 14px 1px rgba($black, 0.4);
-    border-radius: 50px;
     margin-right: 50px;
-  }
-
-  &__phone {
-    width: 63px;
-    height: 63px;
-    border-radius: 50%;
-    background-color: $accent;
-    position: absolute;
-    right: 15%;
-    bottom: 22%;
-    z-index: 999;
-
-    &-img {
-      margin: 20% 20%;
-      fill: $silver;
-      width: 36px;
-      height: 36px;
-    }
   }
 
 }
 
 @media (max-width: 1070px) {
   .top {
-    height: calc(100vh - 80px);
     padding-top: 0;
     background-image: url("../images/benefits.jpg");
     background-size: cover;
@@ -87,29 +68,28 @@
     background-repeat: no-repeat;
     z-index: -2;
     position: relative;
-    
+
     &::before {
       content: '';
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
       right: 0;
       left: 0;
+      bottom: 0;
       background-color: rgba($dark, 0.8);
       z-index: -1;
     }
+
     &__inner {
       justify-content: center;
       flex-direction: column;
       height: calc(100vh - 80px);
     }
-    &__content {
-      margin: auto 0;
-    }
+
     &__title {
       margin-bottom: 0;
     }
+
     &__subtitle {
       display: block;
       font-family: $playfairdisplay, sans-serif;
@@ -119,37 +99,40 @@
       color: $accent;
       margin-bottom: 22px;
     }
+
     &__box {
       display: none;
     }
   }
-  
-}
-@media (max-width: 992px) {}
 
-@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
   .top {
+    &__content {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 915px) {
+  .top {
+    &__content {
+      margin-top: 125px;
+    }
+
     &__title,
     &__subtitle {
-      font-size: 35px;
-      line-height: 40px;
+      font-size: 30px;
+      line-height: 35px;
     }
-    
+
     &__subtitle {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
+
     &__text {
       margin-bottom: 30px;
     }
   }
-}
-
-@media (max-width: 576px) {
-  .top {
-    height: calc(100vh - 80px);
-  }
-}
-
-@media (max-width: 480px) {
- 
 }
